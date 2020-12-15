@@ -18,3 +18,7 @@ var taylor = new Employee
 taylor.first = "Taylor"
 taylor.last = "Jackson"
 
+amyJones.first
+bob.first
+taylor.first
+
