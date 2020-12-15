@@ -32,3 +32,19 @@ class MarketingEmployee(f: String, l: String) extends DepartmentEmployee {
 
 var rnDEmployee = new RnDEmployee("Amy", "Jones")
 var marketingEmployee = new MarketingEmployee("Bob", "Martin")
+
+abstract class Company {
+  val name: String
+  val numberOfObjects: Int
+  val employees: Set[Employee]
+}
+
+// Composition example
+class Pluralsight(n: String, es: Set[Employee]) extends Company {
+  val name = n
+  val numberOfEmployees = es.size
+  val employees = es
+  override val numberOfObjects = 0
+}
+
+val pluralsight = new Pluralsight("Pluralsight Inc.", Set(rnDEmployee, marketingEmployee))
